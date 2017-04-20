@@ -8,10 +8,20 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
     <display-name>LoginServlet</display-name>  
     <servlet-name>LoginServlet</servlet-name>  
     <servlet-class>LoginServlet</servlet-class>  
-  </servlet>  
+  </servlet> 
+  <servlet>  
+    <description></description>  
+    <display-name>LoginServletSecure</display-name>  
+    <servlet-name>LoginServletSecure</servlet-name>  
+    <servlet-class>LoginServletSecure</servlet-class>  
+  </servlet> 
   <servlet-mapping>  
     <servlet-name>LoginServlet</servlet-name>  
     <url-pattern>/LoginServlet</url-pattern>  
+  </servlet-mapping> 
+  <servlet-mapping>  
+    <servlet-name>LoginServletSecure</servlet-name>  
+    <url-pattern>/LoginServletSecure</url-pattern>  
   </servlet-mapping>  
   <servlet>  
     <description></description>  
